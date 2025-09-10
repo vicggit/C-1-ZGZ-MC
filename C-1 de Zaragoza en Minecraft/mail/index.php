@@ -8,7 +8,7 @@ if(isset( $_POST['email']))
 $email = $_POST['email'];
 
 $content="De: $name \n Email: $email \n Mensaje: $message";
-$recipient = "elcanaldejaviergato300@gmail.com";
+$recipient = "victrenesyt@gmail.com";
 $mailheader = "De: $email \r\n";
 mail($recipient, $header, $content, $mailheader) or die("Error!");
 echo("
@@ -120,3 +120,4 @@ echo("
 exit();
 
 ?>
+
