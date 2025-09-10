@@ -1,17 +1,13 @@
 <?php
 $header = 'Nuevo mensaje desde la web de la C-1 de Zaragoza';
-if(isset( $_POST['Name']))
-$name = $_POST['Name'];
-if(isset( $_POST['Name_2']))
-$name2 = $_POST['Name_2'];
-if(isset( $_POST['Comments']))
-$message = $_POST['Comments'];
-if(isset( $_POST['TroubleType']))
-$subject = $_POST['TroubleType'];
-if(isset( $_POST['Email']))
-$email = $_POST['Email'];
+if(isset( $_POST['name']))
+$name = $_POST['name'];
+if(isset( $_POST['comments']))
+$message = $_POST['comments'];
+if(isset( $_POST['email']))
+$email = $_POST['email'];
 
-$content="De: $name $name2 \n Email: $email \n Mensaje: $message";
+$content="De: $name \n Email: $email \n Mensaje: $message";
 $recipient = "elcanaldejaviergato300@gmail.com";
 $mailheader = "De: $email \r\n";
 mail($recipient, $header, $content, $mailheader) or die("Error!");
@@ -122,4 +118,5 @@ echo("
 
 ");
 exit();
+
 ?>
